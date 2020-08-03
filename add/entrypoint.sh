@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 
-mkdir -p /SHARE/video_archive /opt/ivideon/videoserverd
+mkdir -p /opt/ivideon/videoserverd
 
 [ ! -f /SHARE/config.xml ]                     && cp /DEFAULT/config.xml          /SHARE/config.xml
 [ ! -f /opt/ivideon/videoserverd/config.xml  ] && ln -s /SHARE/config.xml         /opt/ivideon/videoserverd/config.xml
