@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  ivi-server:
+    build: .
+    container_name: ivideon-server
+    ports:
+      - "127.0.0.1:19880:80"
+    volumes:
+      - "/var/docker/ivideon/:/ivideon_config"
+      - "/video:/video"
+    restart: always
